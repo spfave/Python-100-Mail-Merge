@@ -14,13 +14,25 @@ PATH_INVITEES = "./Input/Names/"
 PATH_READY_LETTERS = "./Output/ReadyToSend/"
 
 
+# Functions
+def write_letter(file_path, file_name, text):
+    """ Write input text to file file_name at file_path """
+
+    with open(file_path+file_name, mode="w") as file:
+        file.write(text)
+
+
 # Main
 with open(PATH_LETTER_TEMPLATE+"starting_letter.docx", mode="r") as file:
     letter_template = file.read()
 
-print(letter_template)
 
 with open(PATH_INVITEES+"invited_names.txt", mode="r") as file:
     invite_names = file.readlines()
 
-print(invite_names)
+
+for name in invite_names:
+    name_formated = name.strip()
+    letter_file_name = f"Letter to {name_formated}.docx"
+    letter_text = letter_template.replace("[name]", name_formated)
+    write_letter(PATH_READY_LETTERS, letter_file_name, letter_text)

@@ -19,3 +19,8 @@ with open(PATH_LETTER_TEMPLATE+"starting_letter.docx", mode="r") as file:
     letter_template = file.read()
 
 print(letter_template)
+
+with open(PATH_INVITEES+"invited_names.txt", mode="r") as file:
+    invite_names = file.readlines()
+
+print(invite_names)

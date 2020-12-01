@@ -12,6 +12,7 @@
 PATH_LETTER_TEMPLATE = "./Input/Letters/"
 PATH_INVITEES = "./Input/Names/"
 PATH_READY_LETTERS = "./Output/ReadyToSend/"
+PLACEHOLDER = "[name]"
 
 
 # Functions
@@ -34,5 +35,5 @@ with open(PATH_INVITEES+"invited_names.txt", mode="r") as file:
 for name in invite_names:
     name_formated = name.strip()
     letter_file_name = f"Letter to {name_formated}.docx"
-    letter_text = letter_template.replace("[name]", name_formated)
+    letter_text = letter_template.replace(PLACEHOLDER, name_formated)
     write_letter(PATH_READY_LETTERS, letter_file_name, letter_text)

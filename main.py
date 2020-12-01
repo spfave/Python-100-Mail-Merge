@@ -6,3 +6,12 @@
 # Hint1: This method will help you: https://www.w3schools.com/python/ref_file_readlines.asp
 # Hint2: This method will also help you: https://www.w3schools.com/python/ref_string_replace.asp
 # Hint3: THis method will help you: https://www.w3schools.com/python/ref_string_strip.asp
+
+
+# Constants
+PATH_LETTER_TEMPLATE = "./Input/Letters/"
+PATH_INVITEES = "./Input/Names/"
+PATH_READY_LETTERS = "./Output/ReadyToSend/"
+
+
+# Main

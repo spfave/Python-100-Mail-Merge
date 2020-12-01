@@ -15,3 +15,7 @@ PATH_READY_LETTERS = "./Output/ReadyToSend/"
 
 
 # Main
+with open(PATH_LETTER_TEMPLATE+"starting_letter.docx", mode="r") as file:
+    letter_template = file.read()
+
+print(letter_template)
